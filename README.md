@@ -41,3 +41,9 @@ symfony new lyrics-api
 composer require api
 ```
 
+### Install Maker Bundle
+
+```shell script
+composer require maker --dev
+```
+
