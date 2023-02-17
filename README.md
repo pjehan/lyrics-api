@@ -35,3 +35,9 @@ symfony server:start
 symfony new lyrics-api
 ```
 
+### Install API Platform
+
+```shell script
+composer require api
+```
+
