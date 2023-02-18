@@ -10,6 +10,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MusicRepository::class)]
+#[ORM\Index(columns: ['title', 'artist'], name: 'title_artist_idx')]
 #[ApiResource]
 #[ApiFilter(SearchFilter::class, properties: ['title' => 'ipartial', 'artist' => 'ipartial'])]
 class Music
