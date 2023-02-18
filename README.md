@@ -47,3 +47,16 @@ composer require api
 composer require maker --dev
 ```
 
+### Create the entity
+
+```shell script
+php bin/console make:entity
+```
+
+### Create the database schema
+
+```shell script
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```
