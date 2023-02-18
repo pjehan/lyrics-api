@@ -2,6 +2,8 @@
 
 namespace App\ApiResource;
 
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\MusicRepository;
 use Doctrine\DBAL\Types\Types;
@@ -9,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MusicRepository::class)]
 #[ApiResource]
+#[ApiFilter(SearchFilter::class, properties: ['title' => 'ipartial', 'artist' => 'ipartial'])]
 class Music
 {
     #[ORM\Id]
