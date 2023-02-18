@@ -66,3 +66,9 @@ php bin/console doctrine:migrations:migrate
 ```shell script
 composer require --dev orm-fixtures
 ```
+
+### Execute the fixtures
+
+```shell script
+php bin/console doctrine:fixtures:load
+```
